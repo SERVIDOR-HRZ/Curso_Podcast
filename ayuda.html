@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda - EduPlatform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduPlatform</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#cursos">Cursos</a>
+                <a href="instructores.html">Instructores</a>
+                <a href="mi-perfil.html">Mi Perfil</a>
+                <a href="ayuda.html" class="active">Ayuda</a>
+            </nav>
+            <div class="user-menu">
+                <i class="fas fa-user-circle"></i>
+                <span>Mi Cuenta</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Help Header -->
+    <section class="help-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Centro de Ayuda</h1>
+                <p class="header-subtitle">¿Cómo podemos ayudarte?</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar ayuda..." id="helpSearch">
+                    <button class="search-btn" onclick="searchHelp()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Content -->
+    <section class="help-content">
+        <div class="container">
+            <div class="help-layout">
+                <!-- Sidebar -->
+                <aside class="help-sidebar">
+                    <div class="help-categories">
+                        <h3>Categorías</h3>
+                        <div class="category-list">
+                            <a href="#inicio" class="category-item active" onclick="showCategory('inicio')">
+                                <i class="fas fa-home"></i>
+                                Inicio
+                            </a>
+                            <a href="#cuenta" class="category-item" onclick="showCategory('cuenta')">
+                                <i class="fas fa-user"></i>
+                                Mi Cuenta
+                            </a>
+                            <a href="#cursos" class="category-item" onclick="showCategory('cursos')">
+                                <i class="fas fa-play-circle"></i>
+                                Cursos
+                            </a>
+                            <a href="#pagos" class="category-item" onclick="showCategory('pagos')">
+                                <i class="fas fa-credit-card"></i>
+                                Pagos
+                            </a>
+                            <a href="#tecnico" class="category-item" onclick="showCategory('tecnico')">
+                                <i class="fas fa-cog"></i>
+                                Soporte Técnico
+                            </a>
+                            <a href="#contacto" class="category-item" onclick="showCategory('contacto')">
+                                <i class="fas fa-envelope"></i>
+                                Contacto
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="help-main">
+                    <!-- Categoría Inicio -->
+                    <div class="help-category" id="inicio">
+                        <h2>Preguntas Frecuentes</h2>
+                        
+                        <div class="faq-section">
+                            <h3>¿Qué es EduPlatform?</h3>
+                            <p>EduPlatform es una plataforma de aprendizaje online donde puedes acceder a cursos profesionales de alta calidad, aprender a tu ritmo y obtener certificados reconocidos.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Cómo funciona?</h3>
+                            <p>1. Regístrate en la plataforma<br>
+                            2. Explora nuestros cursos disponibles<br>
+                            3. Inscríbete en el curso que te interese<br>
+                            4. Aprende a tu ritmo con videos, recursos y exámenes<br>
+                            5. Obtén tu certificado al completar el curso</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Los cursos son gratuitos?</h3>
+                            <p>Ofrecemos tanto cursos gratuitos como de pago. Los cursos de pago incluyen contenido premium, certificados y soporte directo de instructores.</p>
+                        </div>
+
+                        <div class="quick-actions">
+                            <h3>Acciones Rápidas</h3>
+                            <div class="action-grid">
+                                <button class="action-btn" onclick="showCategory('cuenta')">
+                                    <i class="fas fa-user-plus"></i>
+                                    Crear Cuenta
+                                </button>
+                                <button class="action-btn" onclick="showCategory('cursos')">
+                                    <i class="fas fa-play"></i>
+                                    Ver Cursos
+                                </button>
+                                <button class="action-btn" onclick="showCategory('pagos')">
+                                    <i class="fas fa-credit-card"></i>
+                                    Información de Pagos
+                                </button>
+                                <button class="action-btn" onclick="showCategory('contacto')">
+                                    <i class="fas fa-headset"></i>
+                                    Contactar Soporte
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría Cuenta -->
+                    <div class="help-category" id="cuenta" style="display: none;">
+                        <h2>Mi Cuenta</h2>
+                        
+                        <div class="faq-section">
+                            <h3>¿Cómo creo una cuenta?</h3>
+                            <p>Para crear una cuenta, haz clic en "Registrarse" en la esquina superior derecha, completa el formulario con tu información y confirma tu email.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Cómo cambio mi contraseña?</h3>
+                            <p>Ve a "Mi Perfil" > "Configuración" > "Cambiar Contraseña". Ingresa tu contraseña actual y la nueva contraseña.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Cómo actualizo mi información personal?</h3>
+                            <p>En "Mi Perfil" > "Configuración" puedes editar tu nombre, email y otras preferencias.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Cómo elimino mi cuenta?</h3>
+                            <p>Contacta a nuestro soporte técnico para solicitar la eliminación de tu cuenta. Procesaremos tu solicitud en un plazo de 24 horas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Categoría Cursos -->
+                    <div class="help-category" id="cursos" style="display: none;">
+                        <h2>Cursos</h2>
+                        
+                        <div class="faq-section">
+                            <h3>¿Cómo me inscribo en un curso?</h3>
+                            <p>1. Navega a la sección "Cursos"<br>
+                            2. Selecciona el curso que te interese<br>
+                            3. Haz clic en "Ver Curso"<br>
+                            4. Presiona "Inscribirse" y completa el pago si es necesario</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Puedo acceder a los cursos desde mi móvil?</h3>
+                            <p>Sí, nuestra plataforma es completamente responsive y puedes acceder desde cualquier dispositivo móvil, tablet o computadora.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Cómo descargo los recursos del curso?</h3>
+                            <p>Los recursos están disponibles en cada clase. Busca la sección "Recursos de la clase" y haz clic en "Descargar" junto al archivo que necesites.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Qué pasa si no puedo completar un curso a tiempo?</h3>
+                            <p>No hay problema. Los cursos no tienen fecha límite, puedes completarlos a tu ritmo. Tu progreso se guarda automáticamente.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Cómo obtengo mi certificado?</h3>
+                            <p>Al completar todas las clases y exámenes de un curso, recibirás automáticamente tu certificado. Puedes descargarlo desde "Mi Perfil" > "Certificados".</p>
+                        </div>
+                    </div>
+
+                    <!-- Categoría Pagos -->
+                    <div class="help-category" id="pagos" style="display: none;">
+                        <h2>Pagos y Facturación</h2>
+                        
+                        <div class="faq-section">
+                            <h3>¿Qué métodos de pago aceptan?</h3>
+                            <p>Aceptamos tarjetas de crédito (Visa, Mastercard, American Express), PayPal y transferencias bancarias.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Es seguro realizar pagos en la plataforma?</h3>
+                            <p>Sí, utilizamos encriptación SSL y procesadores de pago seguros para proteger tu información financiera.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Puedo obtener un reembolso?</h3>
+                            <p>Ofrecemos reembolsos completos dentro de los primeros 30 días si no has completado más del 20% del curso.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Cómo puedo ver mi historial de pagos?</h3>
+                            <p>Ve a "Mi Perfil" > "Configuración" > "Historial de Pagos" para ver todas tus transacciones.</p>
+                        </div>
+                    </div>
+
+                    <!-- Categoría Soporte Técnico -->
+                    <div class="help-category" id="tecnico" style="display: none;">
+                        <h2>Soporte Técnico</h2>
+                        
+                        <div class="faq-section">
+                            <h3>¿Qué hago si no puedo reproducir los videos?</h3>
+                            <p>Verifica tu conexión a internet, actualiza tu navegador y habilita JavaScript. Si el problema persiste, contacta a soporte técnico.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Qué navegadores son compatibles?</h3>
+                            <p>Recomendamos usar las versiones más recientes de Chrome, Firefox, Safari o Edge para la mejor experiencia.</p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>¿Cómo reporto un problema técnico?</h3>
+                            <p>Usa el formulario de contacto en la sección "Contacto" o envía un email a soporte@eduplatform.com con detalles del problema.</p>
+                        </div>
+
+                        <div class="troubleshooting">
+                            <h3>Soluciones Rápidas</h3>
+                            <div class="solution-list">
+                                <div class="solution-item">
+                                    <h4>Video no se reproduce</h4>
+                                    <p>• Verifica tu conexión a internet<br>
+                                    • Actualiza tu navegador<br>
+                                    • Desactiva bloqueadores de anuncios</p>
+                                </div>
+                                <div class="solution-item">
+                                    <h4>Problemas de audio</h4>
+                                    <p>• Verifica el volumen de tu dispositivo<br>
+                                    • Revisa la configuración de audio<br>
+                                    • Prueba con auriculares</p>
+                                </div>
+                                <div class="solution-item">
+                                    <h4>Página no carga</h4>
+                                    <p>• Refresca la página (F5)<br>
+                                    • Limpia la caché del navegador<br>
+                                    • Prueba en modo incógnito</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría Contacto -->
+                    <div class="help-category" id="contacto" style="display: none;">
+                        <h2>Contacto</h2>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-card">
+                                <i class="fas fa-envelope"></i>
+                                <h3>Email</h3>
+                                <p>soporte@eduplatform.com</p>
+                                <button class="btn-primary" onclick="sendEmail()">Enviar Email</button>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <i class="fas fa-phone"></i>
+                                <h3>Teléfono</h3>
+                                <p>+1 234 567 8900</p>
+                                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <i class="fas fa-comments"></i>
+                                <h3>Chat en Vivo</h3>
+                                <p>Disponible 24/7</p>
+                                <button class="btn-primary" onclick="startChat()">Iniciar Chat</button>
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <h3>Formulario de Contacto</h3>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text" id="contactName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" id="contactEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Asunto</label>
+                                    <select id="contactSubject">
+                                        <option value="general">Consulta General</option>
+                                        <option value="tecnico">Soporte Técnico</option>
+                                        <option value="pago">Problema de Pago</option>
+                                        <option value="curso">Consulta sobre Curso</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mensaje</label>
+                                    <textarea id="contactMessage" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EduPlatform</h4>
+                    <p>Aprende nuevas habilidades con los mejores instructores.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#cursos">Cursos</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li><a href="mi-perfil.html">Mi Perfil</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> info@eduplatform.com</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduPlatform. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

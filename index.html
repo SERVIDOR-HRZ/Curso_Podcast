@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPlatform - Cursos Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduPlatform</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html#cursos">Cursos</a>
+                <a href="instructores.html">Instructores</a>
+                <a href="mi-perfil.html">Mi Perfil</a>
+                <a href="ayuda.html">Ayuda</a>
+            </nav>
+            <div class="user-menu">
+                <i class="fas fa-user-circle"></i>
+                <span>Mi Cuenta</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Bienvenido a EduPlatform</h1>
+                    <p class="hero-subtitle">Tu plataforma de aprendizaje online</p>
+                    <p class="hero-description">
+                        Descubre cursos profesionales diseñados por expertos. 
+                        Aprende a tu ritmo, desde cualquier lugar y en cualquier momento.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Cursos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Estudiantes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Valoración</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary" onclick="scrollToSection('cursos')">
+                        <i class="fas fa-search"></i>
+                        Explorar Cursos
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <div class="platform-preview">
+                        <div class="preview-card">
+                            <i class="fas fa-play-circle"></i>
+                            <h4>Clases en Video</h4>
+                            <p>Contenido de alta calidad</p>
+                        </div>
+                        <div class="preview-card">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Certificados</h4>
+                            <p>Al completar cada curso</p>
+                        </div>
+                        <div class="preview-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Comunidad</h4>
+                            <p>Interactúa con otros estudiantes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section" id="cursos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cursos Disponibles</h2>
+                <p class="section-subtitle">Elige el curso que mejor se adapte a tus objetivos</p>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">Todos</button>
+                    <button class="filter-tab" data-filter="tecnologia">Tecnología</button>
+                    <button class="filter-tab" data-filter="diseño">Diseño</button>
+                    <button class="filter-tab" data-filter="negocios">Negocios</button>
+                    <button class="filter-tab" data-filter="marketing">Marketing</button>
+                </div>
+            </div>
+            
+            <div class="courses-grid">
+                <!-- Curso de Podcasting -->
+                <div class="course-card" data-category="tecnologia">
+                    <div class="course-image">
+                        <div class="course-overlay">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div class="course-badge">Nuevo</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Tecnología</span>
+                            <span class="course-level">Principiante</span>
+                        </div>
+                        <h3 class="course-title">Crea tu Primer Podcast</h3>
+                        <p class="course-description">
+                            Aprende todo lo necesario para crear, grabar, editar y publicar tu primer podcast profesional.
+                        </p>
+                        <div class="course-stats">
+                            <div class="stat">
+                                <i class="fas fa-play-circle"></i>
+                                <span>8 clases</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>250 estudiantes</span>
+                            </div>
+                        </div>
+                        <div class="course-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (120 reseñas)</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$49.99</span>
+                            <span class="original-price">$99.99</span>
+                        </div>
+                        <button class="btn-primary" onclick="openCourse('podcast')">
+                            <i class="fas fa-play"></i>
+                            Ver Curso
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Curso de Diseño Web -->
+                <div class="course-card" data-category="diseño">
+                    <div class="course-image">
+                        <div class="course-overlay">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="course-badge">Popular</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Diseño</span>
+                            <span class="course-level">Intermedio</span>
+                        </div>
+                        <h3 class="course-title">Diseño Web Moderno</h3>
+                        <p class="course-description">
+                            Domina las últimas tendencias en diseño web y crea sitios impresionantes con HTML, CSS y JavaScript.
+                        </p>
+                        <div class="course-stats">
+                            <div class="stat">
+                                <i class="fas fa-play-circle"></i>
+                                <span>12 clases</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>6 horas</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>450 estudiantes</span>
+                            </div>
+                        </div>
+                        <div class="course-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.8 (200 reseñas)</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$79.99</span>
+                            <span class="original-price">$149.99</span>
+                        </div>
+                        <button class="btn-primary" onclick="openCourse('web-design')">
+                            <i class="fas fa-play"></i>
+                            Ver Curso
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Curso de Marketing Digital -->
+                <div class="course-card" data-category="marketing">
+                    <div class="course-image">
+                        <div class="course-overlay">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Marketing</span>
+                            <span class="course-level">Avanzado</span>
+                        </div>
+                        <h3 class="course-title">Marketing Digital Completo</h3>
+                        <p class="course-description">
+                            Estrategias avanzadas de marketing digital, redes sociales, SEO y publicidad online.
+                        </p>
+                        <div class="course-stats">
+                            <div class="stat">
+                                <i class="fas fa-play-circle"></i>
+                                <span>15 clases</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>8 horas</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>320 estudiantes</span>
+                            </div>
+                        </div>
+                        <div class="course-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.7 (150 reseñas)</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$99.99</span>
+                            <span class="original-price">$199.99</span>
+                        </div>
+                        <button class="btn-primary" onclick="openCourse('marketing')">
+                            <i class="fas fa-play"></i>
+                            Ver Curso
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Curso de Programación -->
+                <div class="course-card" data-category="tecnologia">
+                    <div class="course-image">
+                        <div class="course-overlay">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Tecnología</span>
+                            <span class="course-level">Principiante</span>
+                        </div>
+                        <h3 class="course-title">JavaScript desde Cero</h3>
+                        <p class="course-description">
+                            Aprende JavaScript desde los fundamentos hasta conceptos avanzados con proyectos prácticos.
+                        </p>
+                        <div class="course-stats">
+                            <div class="stat">
+                                <i class="fas fa-play-circle"></i>
+                                <span>20 clases</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>10 horas</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>600 estudiantes</span>
+                            </div>
+                        </div>
+                        <div class="course-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (300 reseñas)</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$69.99</span>
+                            <span class="original-price">$129.99</span>
+                        </div>
+                        <button class="btn-primary" onclick="openCourse('javascript')">
+                            <i class="fas fa-play"></i>
+                            Ver Curso
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Detail Modal -->
+    <div class="course-detail-modal" id="courseDetailModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalCourseTitle">Crea tu Primer Podcast</h3>
+                <button class="close-btn" onclick="closeCourseModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="course-info">
+                    <div class="course-video">
+                        <div class="video-placeholder-large">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Vista previa del curso</p>
+                        </div>
+                    </div>
+                    <div class="course-details">
+                        <h4>Descripción del Curso</h4>
+                        <p id="modalCourseDescription">
+                            Aprende todo lo necesario para crear, grabar, editar y publicar tu primer podcast profesional.
+                        </p>
+                        
+                        <h4>Lo que aprenderás</h4>
+                        <ul class="learning-list">
+                            <li><i class="fas fa-check"></i> Fundamentos del podcasting</li>
+                            <li><i class="fas fa-check"></i> Equipamiento necesario</li>
+                            <li><i class="fas fa-check"></i> Técnicas de grabación</li>
+                            <li><i class="fas fa-check"></i> Edición de audio profesional</li>
+                            <li><i class="fas fa-check"></i> Distribución en plataformas</li>
+                        </ul>
+
+                        <h4>Contenido del Curso</h4>
+                        <div class="course-lessons" id="courseLessons">
+                            <!-- Las clases se cargarán dinámicamente -->
+                        </div>
+
+                        <div class="course-actions">
+                            <button class="btn-primary" onclick="startCourse()">
+                                <i class="fas fa-play"></i>
+                                Comenzar Curso
+                            </button>
+                            <button class="btn-secondary" onclick="addToWishlist()">
+                                <i class="fas fa-heart"></i>
+                                Añadir a Favoritos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EduPlatform</h4>
+                    <p>Aprende nuevas habilidades con los mejores instructores.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#instructores">Instructores</a></li>
+                        <li><a href="#mi-perfil">Mi Perfil</a></li>
+                        <li><a href="#ayuda">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> info@eduplatform.com</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduPlatform. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
